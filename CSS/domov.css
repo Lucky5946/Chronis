@@ -1,0 +1,268 @@
+body {
+  --c1: #FF0097;
+  --c2: #F5F5F5;
+}
+
+.navbar {
+  padding: 15px;
+  background-color: #f8f9fa;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  gap: 20px; 
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.add-btn {
+  background-color: #2c3e50;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar ul li:nth-child(1) .add-btn {
+  background: linear-gradient(90deg, #DA4593, #CF4636);
+}
+
+.navbar ul li:nth-child(2) .add-btn {
+  background: linear-gradient(to bottom, #4B8FFF, #0047B3);
+}
+
+.navbar ul li:nth-child(3) .add-btn {
+  background-color: #DA4593;
+  width: 45px; 
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 24px;
+}
+
+section.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 20px; 
+}
+
+article.card {
+  background-color: #fff;
+  padding: 0px 15px 15px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px #E6E6E6 solid;
+
+}
+
+.card-header h3 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.card-header img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+article.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+article.card .details p {
+  margin: 5px 0;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; 
+  padding: 20px;
+}
+
+.charts {
+  flex: 1 0 45%;
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-wrapper {
+  flex: 1 0 55%;
+  max-width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  text-align: left;
+  padding: 5px;
+}
+
+.checkmark {
+  color: green; 
+  font-size: 1rem;
+  margin-left: 2px;
+}
+
+.pie {
+  position: relative;
+  flex: 1 0 225px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    from 0deg,
+    var(--c1) 0 150deg,
+    var(--c2) 150deg 360deg
+  );
+}
+
+.donut {
+  position: relative;
+  flex: 1 0 225px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: radial-gradient(white 50%, transparent 0 70%, white 0),
+    conic-gradient(
+      from 0deg,
+      var(--c1) 0 150deg,
+      var(--c2) 150deg 360deg
+    );
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.request-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.request-table th, .request-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.request-table th {
+  font-weight: 900;
+}
+
+.request-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.add-request-btn {
+  background: linear-gradient(90deg, #DA4593, #CF4636);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 1025px) {
+  section.cards-container {
+    flex-direction: row;
+  }
+
+  article.card {
+    width: 48%; 
+  }
+}
+
+@media (min-width: 771px) {
+  article.card {
+    width: 100%; 
+  }
+}
+
+@media (min-width: 1024px) {
+  section.cards-container {
+    flex-direction: row;
+  }
+
+  article.card {
+    width: 48%;
+  }
+}
+
+@media (min-width: 1500px) {
+  section.cards-container {
+    flex-direction: row;
+  }
+
+  article.card {
+    width: 32%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  section.cards-container {
+    flex-direction: column;
+  }
+
+  article.card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  section.cards-container {
+    flex-direction: column;
+  }
+
+  article.card {
+    width: 100%;
+  }
+}

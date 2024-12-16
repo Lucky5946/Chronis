@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/81c29e71d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="CSS/Obrazky/Logo_Chronis.png" alt="Logo" class="logo-image">
+                <span class="logo-text">CHRONIS</span>
+            </div>
+            <nav class="nav-links">
+                <a href="">Domů</a>
+                <a href="">O nás</a>
+                <a href="">Služby</a>
+                <a href="">Kontakt</a>
+                <a href="" class="login-link">
+                    <i class="fa-solid fa-right-to-bracket"></i> Přihlásit se
+                </a>
+            </nav>
+            <div class="hamburger" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+    
+    
+    <main>
+        <div class="container">
+
+
+        <div class="left-section">
+            <img src="CSS/Obrazky/wave.png" alt="Image 1" class="side-image">
+            <img src="CSS/Obrazky/time_managment.png" alt="Time Management" class="centered-image">
+        </div>
+
+       
+        <div class="right-section login-container">
+            <h1>VÍTEJTE ZPÁTKY!</h1>
+            <h2>Prosím zadejte své přihlašovací údaje</h2>
+            <form onsubmit="return validateLogin(event)">
+
+                <fieldset class="styled-input">
+                    <legend>Přihlašovací jméno</legend>
+                    <input type="text" id="username" placeholder="Zadejte své přihlašovací jméno" required>
+                </fieldset>
+            
+                <fieldset class="styled-input">
+                    <legend>Heslo</legend>
+                    <input type="password" id="password" placeholder="Zadejte své heslo" required>
+                </fieldset>
+
+                <div class="save-credentials">
+                    <input type="checkbox" id="save-credentials">
+                    <label for="save-credentials">Uložit přihlašovací údaje</label>
+                </div>
+            
+                <button type="submit">Přihlásit se</button>
+            </form>
+        </div>
+        
+    </div>
+    </main>
+</body>
+
+</html>
+<script src="JS/login.js"></script>

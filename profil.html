@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/profil.css">
+    <script src="https://kit.fontawesome.com/81c29e71d5.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <aside>
+            <img src="CSS/Obrazky/kolecko.png" alt="">
+            <img src="CSS/Obrazky/Logo_Chronis.png" alt="">
+    </aside>
+
+    <main>
+
+        <header>
+            <nav class="hlavni">
+                <a href=""><i class="fas fa-cogs"></i></a>
+                <a href=""><i class="fas fa-bell"></i></a>
+                <a href=""></a><span>Tomáš Král</span>
+                <i class="fas fa-caret-down"></i>
+            </nav>
+        </header>
+
+        <nav aria-label="breadcrumb" class="breadcrumb-container">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="">Můj profil</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Upravit profil</li>
+          </ol>
+          <button type="button" id="submit-button" class="breadcrumb-button">
+            Uložit    
+            <span class="icon-container">
+            <i class="fas fa-arrow-right"></i>
+        </span></button>
+      </nav>
+
+      <form id="employee-form" action="" method="post">
+
+            <fieldset>
+
+                <div class="image-container">
+                    <img src="CSS/Obrazky/worker.png" alt="Profilový obrázek" class="profile-image">
+                    <label for="image-upload" class="edit-icon">
+                        <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                        <span><i class="fa-solid fa-pen-to-square" style="color: #28a745;"></i></span>
+                    </label>
+                </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">Křestní jméno</label>
+                  <input type="text" id="first-name" name="first_name" value="Tomáš" required>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Příjmení</label>
+                  <input type="text" id="last-name" name="last_name" value="Král" required>
+                </div>
+              </div>
+
+              <label for="password">Heslo:</label>
+              <input type="password" id="password" name="password" value="123456789" required>
+
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" value="kral.tomas@seznam.cz" required>
+
+              <label for="phone">Telefon:</label>
+              <input type="tel" id="phone" name="phone" value="+420 789 456 123" required>
+
+              <label for="company-address">Adresa firmy</label>
+              <input type="text" id="company-address" name="company_address" value="U Nového 197" required>
+              
+              <label for="city">Město</label>
+              <input type="text" id="city" name="city" value="Pardubice" required>
+              
+              <label for="postal-code">PSČ</label>
+              <input type="text" id="postal-code" name="postal_code" value="530 12"  required>
+
+            </fieldset>
+            
+            
+      
+            <fieldset>
+              <label for="company-name">Název firmy</label>
+              <input type="text" id="company-name" name="company_name" value="ManufactoryLab"  required>
+
+              <div class="form-row">
+                <div class="form-group">
+              <label for="job-title">Pracovní pozice</label>
+              <input list="job-titles" id="job-title" name="job_title" placeholder="Vyberte nebo zadejte" value="Tester" required>
+              <datalist id="job-titles">
+                <option value="Manažer">
+                <option value="Vývojář">
+                <option value="Designér">
+                <option value="Tester">
+              </datalist>
+              </div>
+              <div class="form-group">
+              
+              <label for="department">Oddělení</label>
+              <input list="departments" id="department" name="department" placeholder="Vyberte nebo zadejte" value="IT" required>
+              <datalist id="departments">
+                <option value="Lidské zdroje">
+                <option value="IT">
+                <option value="Finance">
+                <option value="Marketing">
+              </datalist>
+            </div>
+            </div>
+            <label for="start-date">Datum nástupu</label>
+            <div class="date-fields">
+                <select id="year" name="year" required>
+                    <option value="" disabled selected>2019</option>
+                    <script>
+                        const currentYear = new Date().getFullYear();
+                        for (let i = currentYear; i >= currentYear - 100; i--) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+            
+                <select id="month" name="month" required>
+                    <option value="" disabled selected>Únor</option>
+                    <option value="1">Leden</option>
+                    <option value="2">Únor</option>
+                    <option value="3">Březen</option>
+                    <option value="4">Duben</option>
+                    <option value="5">Květen</option>
+                    <option value="6">Červen</option>
+                    <option value="7">Červenec</option>
+                    <option value="8">Srpen</option>
+                    <option value="9">Září</option>
+                    <option value="10">Říjen</option>
+                    <option value="11">Listopad</option>
+                    <option value="12">Prosinec</option>
+                </select>
+            
+                <select id="day" name="day" required>
+                    <option value="" disabled selected>1</option>
+                    <script>
+                        for (let i = 1; i <= 31; i++) {
+                            document.write(`<option value="${i}">${i}</option>`);
+                        }
+                    </script>
+                </select>
+            </div>
+            <section>
+              <article>
+                <img src="CSS/Obrazky/driver-license.png" alt="">
+                <p>258</p>
+              </article>
+              <article>
+                <img src="CSS/Obrazky/rfid-chip.png" alt="">
+                <p>0015343428</p>
+              </article>
+              <article>
+                <img src="CSS/Obrazky/logo.png" alt="">
+                <p>FIRMA</p>
+              </article>
+              <article>
+                <img src="CSS/Obrazky/logo-black.png" alt="">
+                <h1>CHRONIS</h1>
+              </article>
+            </section>
+            
+            </fieldset>
+          </form>
+    </main>
+</body>
+</html>
+
+<script src="JS/submit.js"></script>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar Layout</title>
+<link rel="stylesheet" href="CSS/domov.css">
+<link rel="stylesheet" href="CSS/aside.css">
+<script src="https://kit.fontawesome.com/81c29e71d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header class="mobil">
+    <nav>
+
+      <div class="nav-header">
+        <footer>
+        <img src="CSS/Obrazky/Logo_Chronis.png" alt="Chronis Logo">
+        <h1>CHRONIS</h1>
+      </footer>
+
+        <button class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <ul id="mobile-nav" class="mobile-nav">
+        <div id="icon-row" class="icon-row">
+          <a href=""><i class="fas fa-question-circle"></i></a>
+          <a href="index.html"><i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
+          <a href=""><i class="fas fa-envelope"></i></a>
+        </div>
+        
+        <li><a href=""><i class="fas fa-house"></i> Domů</a></li>
+        <li><a href=""><i class="fas fa-calendar-alt"></i> Docházka</a></li>
+        <li><a href=""><i class="fas fa-user-plus"></i> Personalistika</a></li>
+        <li><a href="smeny.html"><i class="fa-solid fa-calendar-check"></i> Směny</a></li>
+      </ul> 
+
+    </nav>
+  </header>
+
+  <div class="container">
+  <aside>
+
+    <header>
+
+      <img src="CSS/Obrazky/logo.png" alt="Manufactory Lab Logo">
+  
+      <section class="profile">
+        <img src="CSS/Obrazky/worker.png" alt="Profile Picture">
+        <h2>Tomáš Král</h2>
+      </section>
+    
+      <nav class="nav-icons">
+        <a href=""><i class="fas fa-question-circle"></i></a>
+        <a href="index.html"><i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
+        <a href=""><i class="fas fa-envelope"></i></a>
+      </nav>
+
+    </header>
+    
+    <nav class="nav-links">
+
+      <ul>
+        <li><a href=""><i class="fas fa-house"></i> Domů</a></li>
+        <li><a href=""><i class="fas fa-calendar-alt"></i> Docházka</a></li>
+        <li><a href=""><i class="fas fa-user-plus"></i> Personalistika</a></li>
+        <li><a href="smeny.html"><i class="fa-solid fa-calendar-check"></i> Směny</a></li>
+      </ul>  
+
+    </nav>
+  
+    <footer>
+      <img src="CSS/Obrazky/Logo_Chronis.png" alt="Chronis Logo">
+      <h1>CHRONIS</h1>
+    </footer>
+
+  </aside>
+
+  <main>
+
+    <nav class="navbar">
+
+      <ul>
+        <li><button class="add-btn"><i class="fa-solid fa-plus"></i></button></li>
+        <li><button class="add-btn"><i class="fas fa-question-circle"></i></button></li>
+        <li><button onclick="window.location.href='profil.html';" class="add-btn"><i class="fas fa-user"></i></button></li>
+      </ul>
+
+    </nav>
+    
+    <section class="cards-container">
+      <article class="card">
+
+        <header class="card-header">
+          <h3>Odpracovaná doba</h3>
+          <img src="CSS/Obrazky/crossed.png" alt="Zavřít" />
+        </header>
+
+        <div class="content-wrapper">
+
+          <figure class="charts">
+            <div class="pie donut">
+              <div class="center-text">03 h 30 m</div>
+            </div>
+          </figure>
+      
+          <div class="table-wrapper">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Náhradní volno</td>
+                  <td>00:00 h</td>
+                </tr>
+                <tr>
+                  <td>Dovolená - zbývající</td>
+                  <td>42:00 h</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="color: green;">Vše ok<span class="checkmark">&#10003;</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      </article>
+  
+      <article class="card">
+        <header class="card-header">
+          <h3>Žádosti ke schválení</h3>
+          <img src="CSS/Obrazky/crossed.png" alt="Zavřít" />
+        </header>
+        <table class="request-table">
+          <thead>
+            <tr>
+              <th>Akce</th>
+              <th>Osoba</th>
+              <th>Podrobnosti</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nemocenská</td>
+              <td>Tomáš Král</td>
+              <td>20.11.2024 - 27.11.2024</td>
+            </tr>
+            <tr>
+              <td>Rodičovská dovolená</td>
+              <td>Jana Nováková</td>
+              <td>01.12.2024 - 15.12.2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+  
+      <article class="card">
+        <header class="card-header">
+          <h3>Moje žádosti</h3>
+          <img src="CSS/Obrazky/crossed.png" alt="Zavřít" />
+        </header>
+        <table class="request-table">
+          <thead>
+            <tr>
+              <th>Akce</th>
+              <th>Osoba</th>
+              <th>Podrobnosti</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nemocenská</td>
+              <td>Tomáš Král</td>
+              <td>20.11.2024 - 27.11.2024</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="add-request-btn">+ Žádosti</button>
+      </article>
+    </section>
+  </main>
+</div>
+</body>
+</html>
+<script src="JS/hamburger.js"></script>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalendář</title>
+  <link rel="stylesheet" href="CSS/smeny.css">
+  <link rel="stylesheet" href="CSS/aside.css">
+  <script src="https://kit.fontawesome.com/81c29e71d5.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="mobil">
+        <nav>
+          <div class="nav-header">
+            <footer>
+            <img src="CSS/Obrazky/Logo_Chronis.png" alt="Chronis Logo">
+            <h1>CHRONIS</h1>
+          </footer>
+            <button class="hamburger" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+    
+          <ul id="mobile-nav" class="mobile-nav">
+
+            <div id="icon-row" class="icon-row">
+              <a href=""><i class="fas fa-question-circle"></i></a>
+              <a href="index.html"><i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
+              <a href=""><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <li><a href=""><i class="fas fa-house"></i> Domů</a></li>
+            <li><a href=""><i class="fas fa-calendar-alt"></i> Docházka</a></li>
+            <li><a href=""><i class="fas fa-user-plus"></i> Personalistika</a></li>
+            <li><a href="smeny.html"><i class="fa-solid fa-calendar-check"></i> Směny</a></li>
+          </ul>  
+        </nav>
+      </header>
+
+    <div class="container">
+    
+        <aside >
+          <header>
+            <img src="CSS/Obrazky/logo.png" alt="Manufactory Lab Logo">
+          
+            <section class="profile">
+              <img src="CSS/Obrazky/worker.png" alt="Profile Picture">
+              <h2>Tomáš Král</h2>
+            </section>
+          
+            <!-- Navigační ikony -->
+            <nav class="nav-icons">
+              <a href=""><i class="fas fa-question-circle"></i></a>
+              <a href="index.html"><i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
+              <a href=""><i class="fas fa-envelope"></i></a>
+            </nav>
+          </header>
+          
+        
+          <!-- Navigation Links -->
+          <nav class="nav-links">
+            <ul>
+              <li><a href="domov.html"><i class="fas fa-house"></i> Domů</a></li>
+              <li><a href="#"><i class="fas fa-calendar-alt"></i> Docházka</a></li>
+              <li><a href=""><i class="fas fa-user-plus"></i> Personalistika</a></li>
+              <li><a href="smeny.html"><i class="fa-solid fa-calendar-check"></i> Směny</a></li>
+            </ul>  
+          </nav>
+        
+          <!-- Footer -->
+          <footer>
+            <img src="CSS/Obrazky/Logo_Chronis.png" alt="Chronis Logo">
+            <h1>CHRONIS</h1>
+          </footer>
+        </aside>
+      
+        <main>
+            <div class="calendar">
+                <div class="calendar-header">
+                  <button id="prev-month" class="calendar-btn">←</button>
+                  <span id="month-name">Srpen 2024</span>
+                  <button id="next-month" class="calendar-btn">→</button>
+                </div>
+                
+                <div class="calendar-body">
+                  <div class="calendar-header-days">
+                    <span>Pondělí</span>
+                    <span>Úterý</span>
+                    <span>Středa</span>
+                    <span>Čtvrtek</span>
+                    <span>Pátek</span>
+                    <span>Sobota</span>
+                    <span>Neděle</span>
+                  </div>
+                  
+                  <div id="calendar-days" class="calendar-days"></div>
+
+                  <div class="calendar-events">
+                    <h3>Události:</h3>
+                    <ul id="events-list">
+
+                    </ul>
+                  </div>
+                  
+                </div>
+              </div>
+        </main>
+      </div>
+  
+
+</body>
+</html>
+
+<script src="JS/smeny.js"></script>
+<script src="JS/hamburger.js"></script>
